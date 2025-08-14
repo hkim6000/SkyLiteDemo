@@ -5,7 +5,7 @@ This SkyLiteDemo project serves as a comprehensive and practical showcase of the
 The application presents a classic dashboard-style interface, typical of an administrative portal or a logged-in user's home page, and effectively utilizes the framework's server-centric, AJAX-driven architecture.
 <h3>Architectural and Feature Highlights</h3>
 <h4>1. Core Architectural Patterns & Design Choices</h4>
-The project consistently follows several powerful architectural patterns that are central to the SkyLite philosophy:
+The project consistently follows several powerful architectural patterns that are central to the SkyLite philosophy:<br>
 •	Model-View (MV/EV) Pattern: The project is architected around a clear separation of concerns using "Main Views" (MV) for displaying lists of data and "Edit Views" (EV) for creating or editing individual records. This pattern is facilitated by a custom WebBase class that manages a ViewPart object, which acts as a ViewModel, holding the state and data for the current view.<br>
 •	Single-Page Application (SPA)-like Navigation: The application avoids full page reloads for most actions. A main "shell" page (e.g., XysUser.vb) loads the master layout, and the content area is dynamically replaced with partial views (MV or EV) using ApiResponse commands (SetElementContents), creating a seamless user experience.<br>
 •	Robust Role-Based Access Control (RBAC): Security is deeply integrated. The WebBase class centralizes permission checking for both page access (ViewAccess()) and specific actions/methods (ViewMethods()). The UI is then dynamically rendered based on these permissions, ensuring users only see and interact with the functions they are authorized to use.<br>
